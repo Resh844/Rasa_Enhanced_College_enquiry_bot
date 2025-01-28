@@ -1,7 +1,5 @@
 # Rasa_Enhanced_College_enquiry_bot
 
-# Rasa Enhanced College Enquiry Bot
-
 ## Overview
 The Rasa Enhanced College Enquiry Bot is an AI-powered chatbot that automates responses to college-related queries, reducing administrative workload and improving the user experience.
 
@@ -22,6 +20,6 @@ The Rasa Enhanced College Enquiry Bot is an AI-powered chatbot that automates re
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/Rasa_Enhanced_College_Enquiry_Bot.git
-   cd Rasa_Enhanced_College_Enquiry_Bot
+   git clone https://github.com/Resh844/Rasa_Enhanced_College_enquiry_bot.git
+   cd Rasa_botProject
 
