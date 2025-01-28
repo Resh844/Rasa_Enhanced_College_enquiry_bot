@@ -1,0 +1,41 @@
+# This file contains the different endpoints your bot can use.
+
+# The server where the models are pulled from.
+# Uncomment and update the following section if you want to fetch models from a remote server
+# models:
+#   url: http://my-server.com/models/default_core@latest
+#   wait_time_between_pulls: 10   # optional (default: 100)
+
+# Server which runs your custom actions.
+# This is where the Rasa action server is hosted.
+action_endpoint:
+  url: "http://localhost:5055/webhook" # Ensure your actions server is running here
+
+# Tracker store which is used to store the conversations.
+# By default, the conversations are stored in memory.
+# Uncomment and configure the following lines if you need to use a persistent tracker store like Redis or MongoDB.
+# For example, to use Redis:
+# tracker_store:
+#   type: redis
+#   url: localhost
+#   port: 6379
+#   db: 0
+#   password: mypassword
+#   use_ssl: false
+
+# Uncomment and configure if you are using MongoDB:
+# tracker_store:
+#   type: mongod
+#   url: mongodb://localhost:27017
+#   db: rasa
+#   username: your_username
+#   password: your_password
+
+# Event broker which all conversation events should be streamed to.
+# This can be used for streaming events like message logs, metrics, etc.
+# Uncomment and configure the following lines if using an event broker (e.g., Kafka):
+# event_broker:
+#   url: localhost
+#   username: username
+#   password: password
+#   queue: queue

@@ -1,0 +1,430 @@
+version: "3.1"
+
+stories:
+  - story: User selects English and asks about admission process
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: admission_process
+      - action: utter_admission_process
+
+  - story: User selects Kannada and asks about admission process
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: admission_process
+      - action: utter_admission_process
+
+  # Story for User selecting English and asking for course details
+  - story: User selects English and asks about course details
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: course_details
+      - action: utter_course_details
+      - intent: inform
+        entities:
+          - course: "Computer Science"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "Mechanical Engineering"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "MBA"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "Information Science and Engineering"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "ECE"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "EEE"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "AI & Data Science"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "AI & ML"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "Civil Engineering"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "CSE - AIML"
+      - action: action_show_course_details
+
+  # Story for User selecting Kannada and asking for course details
+  - story: User selects Kannada and asks about course details
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: course_details
+      - action: utter_course_details
+      - intent: inform
+        entities:
+          - course: "computer_science"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "mechanical_engineering"
+      - action: action_show_course_details
+      - intent: inform
+        entities:
+          - course: "business_administration"
+      - action: action_show_course_details
+
+  - story: User selects English and asks about fee structure
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: fee_structure
+      - action: utter_fee_structure
+
+  - story: User selects Kannada and asks about fee structure
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: fee_structure
+      - action: utter_fee_structure
+
+  - story: User selects English and asks about hostel facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: hostel_facilities
+      - action: utter_hostel_facilities
+
+  - story: User selects Kannada and asks about hostel facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: hostel_facilities
+      - action: utter_hostel_facilities
+
+  - story: User selects English and asks about library facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: library_facilities
+      - action: utter_library_facilities
+
+  - story: User selects Kannada and asks about library facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: library_facilities
+      - action: utter_library_facilities
+
+  - story: User selects English and asks about transport facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: transport_facilities
+      - action: utter_transport_facilities
+
+  - story: User selects Kannada and asks about transport facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: transport_facilities
+      - action: utter_transport_facilities
+
+  - story: User selects English and asks about extracurricular activities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: extracurricular_activities
+      - action: utter_extracurricular_activities
+
+  - story: User selects Kannada and asks about extracurricular activities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: extracurricular_activities
+      - action: utter_extracurricular_activities
+
+  - story: User selects English and asks about scholarships
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: scholarship_details
+      - action: utter_scholarship_details
+
+  - story: User selects Kannada and asks about scholarships
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: scholarship_details
+      - action: utter_scholarship_details
+
+  - story: User selects English and asks about faculty details
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: faculty_details
+      - action: utter_faculty_details
+
+  - story: User selects Kannada and asks about faculty details
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: faculty_details
+      - action: utter_faculty_details
+
+  - story: User selects English and asks about research opportunities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: research_opportunities
+      - action: utter_research_opportunities
+
+  - story: User selects Kannada and asks about research opportunities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: research_opportunities
+      - action: utter_research_opportunities
+
+  - story: User selects English and asks about sports facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: sports_facilities
+      - action: utter_sports_facilities
+
+  - story: User selects Kannada and asks about sports facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: sports_facilities
+      - action: utter_sports_facilities
+
+  - story: User selects English and asks about exams results
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: exams_results
+      - action: utter_exams_results
+
+  - story: User selects Kannada and asks about exams results
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: exams_results
+      - action: utter_exams_results
+
+  - story: User selects English and asks about exam schedule
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: exam_schedule
+      - action: utter_exam_schedule
+
+  - story: User selects Kannada and asks about exam schedule
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: exam_schedule
+      - action: utter_exam_schedule
+
+  - story: User selects English and asks about cafeteria facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: cafeteria_facilities
+      - action: utter_cafeteria_facilities
+
+  - story: User selects Kannada and asks about cafeteria facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: cafeteria_facilities
+      - action: utter_cafeteria_facilities
+
+  - story: User selects English and asks about alumni network
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: alumni_network
+      - action: utter_alumni_network
+
+  - story: User selects Kannada and asks about alumni network
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: alumni_network
+      - action: utter_alumni_network
+
+  - story: User selects English and asks about campus facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: campus_facilities
+      - action: utter_campus_facilities
+
+  - story: User selects Kannada and asks about campus facilities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: campus_facilities
+      - action: utter_campus_facilities
+
+  - story: User selects English and asks about internship opportunities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "English"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "English"
+      - intent: internship_opportunities
+      - action: utter_internship_opportunities
+
+  - story: User selects Kannada and asks about internship opportunities
+    steps:
+      - intent: select_language
+        entities:
+          - language: "Kannada"
+      - action: action_set_language
+      - slot_was_set:
+          - language: "Kannada"
+      - intent: internship_opportunities
+      - action: utter_internship_opportunities

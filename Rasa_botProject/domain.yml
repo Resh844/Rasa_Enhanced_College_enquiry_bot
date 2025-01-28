@@ -1,0 +1,324 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - select_language
+  - admission_process
+  - course_details
+  # - computer_science
+  # - mechanical_engineering
+  # - business_administration
+  - fee_structure
+  - campus_facilities
+  - exams_results
+  - exam_schedule
+  - hostel_facilities
+  - library_facilities
+  - transport_facilities
+  - extracurricular_activities
+  - scholarship_details
+  - faculty_details
+  - research_opportunities
+  - sports_facilities
+  - inform
+  - cafeteria_facilities
+  - alumni_network
+  - internship_opportunities
+
+entities:
+  - language
+  - course
+
+slots:
+  language:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: language
+  course:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: course
+
+responses:
+  utter_select_language:
+    - text: "Hello! Please choose your language: English or Kannada."
+      buttons:
+        - title: "English"
+          payload: '/select_language{{"language": "English"}}'
+        - title: "Kannada"
+          payload: '/select_language{{"language": "Kannada"}}'
+
+  utter_greet:
+    - text: "Please choose a language: English or Kannada."
+
+  utter_goodbye:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Goodbye! Have a great day."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ವಿದಾಯ! ಒಳ್ಳೆಯ ದಿನವನ್ನಾ ಹೊಂದಿ."
+
+  utter_admission_process:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "The admission process includes online application, document verification, and interviews."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ಆನ್‌ಲೈನ್ ಅರ್ಜಿ, ಡಾಕ್ಯುಮೆಂಟ್ ಪರಿಶೀಲನೆ ಮತ್ತು ಸಂದರ್ಶನಗಳು ಸೇರಿವೆ."
+
+  utter_course_details:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We offer the following courses. Which one would you like to know more about?"
+      buttons:
+        - title: "Computer Science"
+          payload: '/inform{{"course": "Computer Science"}}'
+        - title: "Mechanical Engineering"
+          payload: '/inform{{"course": "Mechanical Engineering"}}'
+        - title: "Information Science and Engineering"
+          payload: '/inform{{"course": "Information Science and Engineering"}}'
+        - title: "Electronics and Communication Engineering"
+          payload: '/inform{{"course": "ECE"}}'
+        - title: "Electrical and Electronics Engineering"
+          payload: '/inform{{"course": "EEE"}}'
+        - title: "AI & Data Science"
+          payload: '/inform{{"course": "AI & Data Science"}}'
+        - title: "AI & ML"
+          payload: '/inform{{"course": "AI & ML"}}'
+        - title: "Civil Engineering"
+          payload: '/inform{{"course": "Civil Engineering"}}'
+        - title: "CSE - AIML"
+          payload: '/inform{{"course": "CSE - AIML"}}'
+        - title: "MBA"
+          payload: '/inform{{"course": "MBA"}}'
+
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ಈ ಕೆಳಗಿನ ಕೋರ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೇವೆ. ನೀವು ಯಾವದಾಗಿ ಹೆಚ್ಚು ತಿಳಿಯಲು ಬಯಸುತ್ತೀರಿ?"
+      buttons:
+        - title: "ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್"
+          payload: '/inform{{"course": "Computer Science"}}'
+        - title: "ಮೆಕಾನಿಕಲ್ ಎಂಜಿನಿಯರಿಂಗ್"
+          payload: '/inform{{"course": "Mechanical Engineering"}}'
+        - title: "ಮಾಹಿತಿ ವಿಜ್ಞಾನ ಮತ್ತು ಇಂಜಿನಿಯರಿಂಗ್"
+          payload: '/inform{{"course": "Information Science and Engineering"}}'
+        - title: "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಮತ್ತು ಸಂವಹನ ಎಂಜಿನಿಯರಿಂಗ್"
+          payload: '/inform{{"course": "ECE"}}'
+        - title: "ಎಲೆಕ್ಟ್ರಿಕಲ್ ಮತ್ತು ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಎಂಜಿನಿಯರಿಂಗ್"
+          payload: '/inform{{"course": "EEE"}}'
+        - title: "AI ಮತ್ತು ಡೇಟಾ ಸೈನ್ಸ್"
+          payload: '/inform{{"course": "AI & Data Science"}}'
+        - title: "AI ಮತ್ತು ಮೆಷಿನ್ ಲರ್ನಿಂಗ್"
+          payload: '/inform{{"course": "AI & ML"}}'
+        - title: "ಸಿವಿಲ್ ಎಂಜಿನಿಯರಿಂಗ್"
+          payload: '/inform{{"course": "Civil Engineering"}}'
+        - title: "CSE - AIML"
+          payload: '/inform{{"course": "CSE - AIML"}}'
+        - title: "MBA"
+          payload: '/inform{{"course": "MBA"}}'
+
+  utter_fee_structure:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our fee structure varies by course and is detailed on our website."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಶುಲ್ಕ ರಚನೆ ಕೋರ್ಸ್ ಪ್ರಕಾರ ಬದಲಾಗುತ್ತದೆ ಮತ್ತು ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ."
+
+  utter_hostel_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We provide comfortable hostel facilities for both boys and girls."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ಗಂಡು ಮತ್ತು ಹೆಣ್ಣು ವಿದ್ಯಾರ್ಥಿಗಳಿಗಾಗಿ ಸುಸಜ್ಜಿತ ವಸತಿಗೃಹವನ್ನು ಒದಗಿಸುತ್ತೇವೆ."
+
+  utter_library_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our library is well-equipped with books, journals, and digital resources."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಗ್ರಂಥಾಲಯವು ಪುಸ್ತಕಗಳು, ಜರ್ನಲ್‌ಗಳು ಮತ್ತು ಡಿಜಿಟಲ್ ಸಂಪತ್ತುಗಳಿಂದ ಸಮೃದ್ಧವಾಗಿದೆ."
+
+  utter_transport_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We offer transport facilities with buses covering major areas."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ಪ್ರಮುಖ ಪ್ರದೇಶಗಳನ್ನು ಒಳಗೊಂಡು ಬಸ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ."
+
+  utter_extracurricular_activities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We encourage participation in sports, cultural events, and clubs."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ಕ್ರೀಡೆ, ಸಾಂಸ್ಕೃತಿಕ ಘಟನೆಗಳು ಮತ್ತು ಕ್ಲಬ್‌ಗಳಲ್ಲಿ ಭಾಗವಹಿಸುವುದನ್ನು ಪ್ರೋತ್ಸಾಹಿಸುತ್ತೇವೆ."
+
+  utter_scholarship_details:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Scholarship details are available in the admissions section of our website."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ಶಿಷ್ಯವೃತ್ತಿ ವಿವರಗಳು ಪ್ರವೇಶ ವಿಭಾಗದಲ್ಲಿ ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ."
+
+  utter_faculty_details:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our faculty members are highly qualified and experienced."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಅಧ್ಯಾಪಕರು ಅತ್ಯಂತ ಅರ್ಹ ಮತ್ತು ಅನುಭವಿ."
+
+  utter_research_opportunities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our institution offers research opportunities across disciplines."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಸಂಸ್ಥೆ ವಿವಿಧ ವಿಷಯಗಳಲ್ಲಿ ಸಂಶೋಧನಾ ಅವಕಾಶಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ."
+
+  utter_sports_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We have excellent sports facilities including fields and courts."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ಕ್ರೀಡಾ ಕ್ಷೇತ್ರಗಳು ಮತ್ತು ನ್ಯಾಯಾಲಯಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಉತ್ತಮ ಸೌಲಭ್ಯಗಳನ್ನು ಹೊಂದಿದ್ದೇವೆ."
+
+  utter_exams_results:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Exam results are published on our official website and can be checked there."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ಪರೀಕ್ಷೆಯ ಫಲಿತಾಂಶಗಳು ನಮ್ಮ ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅಲ್ಲಿ ಪರಿಶೀಲಿಸಬಹುದು."
+
+  utter_cafeteria_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We provide a variety of food options in our cafeteria including snacks, meals, and beverages."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ನಮ್ಮ ಕ್ಯಾಫೆಟೇರಿಯಾದಲ್ಲಿ ವಿಭಿನ್ನ ಆಹಾರ ಆಯ್ಕೆಗಳು ಒದಗಿಸುತ್ತೇವೆ, snacks, ಭೋಜನ ಮತ್ತು ಪಾನೀಯಗಳನ್ನು ಒಳಗೊಂಡಿವೆ."
+
+  utter_alumni_network:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our alumni network connects graduates with current students, providing valuable networking opportunities."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳ ಜಾಲವು ಪದವೀಧರರನ್ನು ಪ್ರಸ್ತುತ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತಿದೆ, ಅಮೂಲ್ಯವಾದ ನೆಟ್ವರ್ಕಿಂಗ್ ಅವಕಾಶಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ."
+
+  utter_campus_facilities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "Our campus offers a wide range of facilities including sports grounds, libraries, computer labs, and recreational areas."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಮ್ಮ ಕಾಲೇಜು ಆವರಣದಲ್ಲಿ ಕ್ರೀಡಾಂಗಣಗಳು, ಗ್ರಂಥಾಲಯಗಳು, ಕಂಪ್ಯೂಟರ್ ಲ್ಯಾಬ್‌ಗಳು ಮತ್ತು ವಿಶ್ರಾಂತಿಯ ಪ್ರದೇಶಗಳನ್ನು ಸೇರಿಸಿರುವ ವಿವಿಧ ಸೌಲಭ್ಯಗಳನ್ನು ಒದಗಿಸಲಾಗಿದೆ."
+
+  utter_internship_opportunities:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "We have tie-ups with various companies offering internship opportunities in multiple fields."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ನಾವು ವಿವಿಧ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಇಂಟರ್ನ್‌ಶಿಪ್ ಅವಕಾಶಗಳನ್ನು ನೀಡುವ ವಿವಿಧ ಕಂಪನಿಗಳೊಂದಿಗೆ ಸಹಕಾರ ಹೊಂದಿದ್ದೇವೆ."
+
+  utter_exam_schedule:
+    - condition:
+        - type: slot
+          name: language
+          value: "English"
+      text: "The exam schedule is available on our website. You can find the dates and timings there."
+    - condition:
+        - type: slot
+          name: language
+          value: "Kannada"
+      text: "ಪರೀಕ್ಷಾ ವೇಳಾಪಟ್ಟಿ ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಲಭ್ಯವಿದೆ. ನೀವು ಅವುಗಳ ದಿನಾಂಕ ಮತ್ತು ಸಮಯಗಳನ್ನು ಅಲ್ಲಿ ಕಂಡುಹಿಡಿಯಬಹುದು."
+
+actions:
+  - action_set_language
+  - action_show_course_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

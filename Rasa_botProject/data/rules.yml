@@ -1,0 +1,87 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Greet the user and ask language
+    steps:
+      - intent: greet
+      - action: utter_select_language
+
+  - rule: Handle language selection
+    steps:
+      - intent: select_language
+      - action: action_set_language
+
+  - rule: Respond to course selection
+    steps:
+      - intent: inform
+      - action: utter_course_details
+
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "Mechanical Engineering"
+      - action: action_show_course_details
+
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "MBA"
+      - action: action_show_course_details
+
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "Computer Science"
+      - action: action_show_course_details
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "Information Science and Engineering"
+      - action: action_show_course_details
+
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "ECE"
+      - action: action_show_course_details
+
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "EEE"
+      - action: action_show_course_details
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "AI & Data Science"
+      - action: action_show_course_details
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "AI & ML"
+      - action: action_show_course_details
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "Civil Engineering"
+      - action: action_show_course_details
+  - rule: Provide specific course details
+    steps:
+      - intent: inform
+        entities:
+          - course: "CSE - AIML"
+      - action: action_show_course_details

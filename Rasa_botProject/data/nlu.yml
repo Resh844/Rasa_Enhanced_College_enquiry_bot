@@ -1,0 +1,257 @@
+version: "3.1"
+nlu:
+  # Intent: Greeting
+  - intent: greet
+    examples: |
+      - Hello (English)
+      - Hi (English)
+      - Hey (English)
+      - Good morning (English)
+      - Howdy (English)
+      - ನಮಸ್ಕಾರ (Kannada)
+      - ಹಾಯ್ (Kannada)
+      - ಹೇಗಿದ್ದೀರಿ (Kannada)
+      - ಶುಭೋದಯ (Kannada)
+
+  - intent: select_language
+    examples: |
+      - English
+      - Eng
+      - Kannada
+      - Kan
+      - kannad
+
+  # Intent: Goodbye
+  - intent: goodbye
+    examples: |
+      - Goodbye (English)
+      - Bye (English)
+      - See you later (English)
+      - Take care (English)
+      - Have a nice day (English)
+      - ವಿದಾಯ (Kannada)
+      - ಹೋಗಿ ಬರುವುದು (Kannada)
+      - ಒಳ್ಳೆಯ ದಿನವನ್ನಾ ಹೊಂದಿ (Kannada)
+
+  # Intent: Admission Process
+  - intent: admission_process
+    examples: |
+      - What is the admission process? (English)
+      - How do I apply for admission? (English)
+      - Tell me about the admission procedure. (English)
+      - What is the process to join? (English)
+      - ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆ ಏನು? (Kannada)
+      - ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ಪ್ರಕ್ರಿಯೆ ಹೇಗೆ? (Kannada)
+      - ಪ್ರವೇಶ ಪ್ರಕ್ರಿಯೆ ಬಗ್ಗೆ ಹೇಳಿ (Kannada)
+
+  # Intent: Course Details
+  - intent: course_details
+    examples: |
+      - Tell me about the courses. (English)
+      - What courses do you offer? (English)
+      - What programs are available? (English)
+      - What undergraduate courses do you have? (English)
+      - ಕೋರ್ಸ್‌ಗಳ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ನೀವು ಯಾವ ಕೋರ್ಸ್‌ಗಳನ್ನು ನೀಡುತ್ತೀರಿ? (Kannada)
+      - ಯಾವ ಪದವಿ ಕೋರ್ಸ್‌ಗಳು ಲಭ್ಯವಿವೆ? (Kannada)
+      - ನಾನು ಕೋರ್ಸ್‌ಗಳ ಬಗ್ಗೆ ತಿಳಿಯಲು ಇಚ್ಛಿಸುತ್ತೇನೆ (Kannada)
+      - ದಯವಿಟ್ಟು ಕೋರ್ಸ್ ವಿವರಗಳನ್ನು ನೀಡಿ (Kannada)
+
+  - intent: inform
+    examples: |
+      - computer science
+      - mechanical engineering
+      - business administration
+      - I want to know more about computer science
+      - Tell me about mechanical engineering
+      - Business administration course details
+      - ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್
+      - ಮೆಕಾನಿಕಲ್ ಎಂಜಿನಿಯರಿಂಗ್
+      - ವ್ಯಾಪಾರ ಆಡಳಿತ
+      - ನಾನು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಬಗ್ಗೆ ಹೆಚ್ಚು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೇನೆ
+      - ಮೆಕಾನಿಕಲ್ ಎಂಜಿನಿಯರಿಂಗ್ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ
+      - ವ್ಯಾಪಾರ ಆಡಳಿತ ಕೋರ್ಸ್ ವಿವರಗಳನ್ನು ನೀಡಿ
+
+  # Intent: Fee Structure
+  - intent: fee_structure
+    examples: |
+      - What is the fee structure? (English)
+      - How much are the fees? (English)
+      - Can you tell me about the fees? (English)
+      - What is the cost of the course? (English)
+      - ಶುಲ್ಕ ರಚನೆ ಏನು? (Kannada)
+      - ವಿದ್ಯಾರ್ಹತೆಗಾಗಿ ಶುಲ್ಕ ಎಷ್ಟು? (Kannada)
+      - ನಮ್ಮ ಕೋರ್ಸ್‌ಗಳ ಶುಲ್ಕ ರಚನೆ ಹೇಗಿದೆ? (Kannada)
+
+  # Intent: Faculty Details
+  - intent: faculty_details
+    examples: |
+      - Tell me about the faculty. (English)
+      - Who are the faculty members? (English)
+      - What are the qualifications of the faculty? (English)
+      - Can you tell me about your professors? (English)
+      - ಅಧ್ಯಾಪಕರ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ನಿಮ್ಮ ಅಧ್ಯಾಪಕರ ಬಗ್ಗೆ ಹೇಳಿ (Kannada)
+      - ನಮ್ಮ ಕಾಲೇಜಿನ ಅಧ್ಯಾಪಕರ ಕುರಿತಾಗಿ ವಿವರ ನೀಡಿ (Kannada)
+
+  # Intent: Extracurricular Activities
+  - intent: extracurricular_activities
+    examples: |
+      - What extracurricular activities are available? (English)
+      - Tell me about the extracurricular programs. (English)
+      - What clubs and societies do you have? (English)
+      - Do you offer sports activities? (English)
+      - ಪಠ್ಯೇತರ ಚಟುವಟಿಕೆಗಳ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ನೀವು ಯಾವ ಪಠ್ಯೇತರ ಚಟುವಟಿಕೆಗಳನ್ನು ಒದಗಿಸುತ್ತೀರಿ? (Kannada)
+      - ನೀವು ಯಾವ ಕ್ರೀಡಾ ಚಟುವಟಿಕೆಗಳನ್ನು ನಡೆಸುತ್ತೀರಿ? (Kannada)
+
+  # Intent: Hostel Facilities
+  - intent: hostel_facilities
+    examples: |
+      - Do you have hostel facilities? (English)
+      - What are the hostel options available? (English)
+      - Can you tell me about the hostel? (English)
+      - What is the accommodation like? (English)
+      - ನೀವು ಹೋಸ್ಟೆಲ್ ಸೌಲಭ್ಯಗಳನ್ನು ಹೊಂದಿದೆಯೆ? (Kannada)
+      - ಹೋಸ್ಟೆಲ್ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ಹೋಸ್ಟೆಲ್ ಸೌಲಭ್ಯಗಳು ಏನು? (Kannada)
+
+  # Intent: Internship Opportunities
+  - intent: internship_opportunities
+    examples: |
+      - Do you offer internship opportunities? (English)
+      - What internships do you offer? (English)
+      - Can you tell me about the internships? (English)
+      - Are internships available in the field? (English)
+      - ನೀವು ಇಂಟರ್ನ್‌ಶಿಪ್ ಅವಕಾಶಗಳನ್ನು ನೀಡುತ್ತೀರಾ? (Kannada)
+      - ನೀವು ಯಾವ ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳನ್ನು ನೀಡುತ್ತೀರಿ? (Kannada)
+      - ಇಂಟರ್ನ್‌ಶಿಪ್ ಕುರಿತು ವಿವರ ಕೊಡಿ (Kannada)
+
+  # Intent: Alumni Network
+  - intent: alumni_network
+    examples: |
+      - Tell me about the alumni network. (English)
+      - What support do alumni provide? (English)
+      - How can I connect with alumni? (English)
+      - Do you have an alumni network? (English)
+      - ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳ ನೆಟ್‌ವರ್ಕ್ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳು ಹೇಗೆ ಬೆಂಬಲ ನೀಡುತ್ತಾರೆ? (Kannada)
+      - ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು ಹೇಗೆ? (Kannada)
+
+  # Intent: Exam Schedule
+  - intent: exam_schedule
+    examples: |
+      - When is the exam schedule available? (English)
+      - Where can I find the exam timetable? (English)
+      - Tell me the exam dates. (English)
+      - When will the exams be held? (English)
+      - ಪರೀಕ್ಷೆ ವೇಳಾಪಟ್ಟಿ ಯಾವಾಗ ಲಭ್ಯವಿದೆ? (Kannada)
+      - ಪರೀಕ್ಷೆಗಳ ದಿನಾಂಕಗಳನ್ನು ನನಗೆ ಹೇಳಿ (Kannada)
+      - ಪರೀಕ್ಷೆಗಳ ವೇಳಾಪಟ್ಟಿಯನ್ನು ನನ್ನಗೆ ಕೊಡಿ (Kannada)
+
+  # Intent: Cafeteria Facilities
+  - intent: cafeteria_facilities
+    examples: |
+      - Tell me about the cafeteria. (English)
+      - What food options do you offer? (English)
+      - Is there a canteen on campus? (English)
+      - Can I find meals on campus? (English)
+      - ಕ್ಯಾನ್ಟೀನ್ ಸೌಲಭ್ಯಗಳ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+      - ನೀವು ಯಾವ ಆಹಾರ ಆಯ್ಕೆಗಳನ್ನು ಒದಗಿಸುತ್ತೀರಿ? (Kannada)
+      - ನೀವು ಅಂಗಡಿಯಲ್ಲಿ ಏನು ಆಹಾರವನ್ನು ನೀಡುತ್ತೀರಿ? (Kannada)
+
+  # Intent: Research Opportunities
+  - intent: research_opportunities
+    examples: |
+      - Do you offer research opportunities? (English)
+      - What research opportunities are available? (English)
+      - Can you tell me about the research programs? (English)
+      - Are there research facilities? (English)
+      - ಸಂಶೋಧನಾ ಅವಕಾಶಗಳು ಲಭ್ಯವಿದೆಯೆ? (Kannada)
+      - ನೀವು ಸಂಶೋಧನೆಗಾಗಿ ಅವಕಾಶಗಳನ್ನು ನೀಡುತ್ತೀರಾ? (Kannada)
+      - ಸಂಶೋಧನಾ ಯೋಜನೆಗಳ ಬಗ್ಗೆ ನನಗೆ ಹೇಳಿ (Kannada)
+
+  # Exams Results Intent
+  - intent: exams_results
+    examples: |
+      - What are the exam results?
+      - Can you tell me about the exam results?
+      - How can I check the exam results?
+      - What is the process to check exam results?
+      - How can I get my exam results?
+      - ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳು ಹೇಗೆ ಪಡೆಯಬಹುದು?
+      - ನಾನು ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳನ್ನು ಹೇಗೆ ನೋಡಬಹುದು?
+      - ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳು ಯಾವಾಗ ಪ್ರಕಟವಾಗುತ್ತವೆ?
+      - ನನಗೆ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳನ್ನು ತಿಳಿಸಿ
+
+  # Library Facilities Intent
+  - intent: library_facilities
+    examples: |
+      - Tell me about the library facilities
+      - What are the library facilities?
+      - What resources are available in the library?
+      - Can I access online resources in the library?
+      - Does the library have digital resources?
+      - ನಮ್ಮ ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಯಾವ ಸೌಲಭ್ಯಗಳು ಇವೆ?
+      - ಗ್ರಂಥಾಲಯದ ಸೌಲಭ್ಯಗಳನ್ನು ನನಗೆ ಹೇಳಿ
+      - ಗ್ರಂಥಾಲಯದಲ್ಲಿ ಡಿಜಿಟಲ್ ಸಂಪತ್ತಿದ್ದಾಗುತ್ತದೆಯೆ?
+      - ನೀವು ಗ್ರಂಥಾಲಯವನ್ನು ಹೇಗೆ ಬಳಸಬಹುದು?
+
+  # Scholarship Details Intent
+  - intent: scholarship_details
+    examples: |
+      - Tell me about the scholarship details
+      - How can I apply for scholarships?
+      - What are the eligibility criteria for scholarships?
+      - Can you provide scholarship information?
+      - Where can I find details about scholarships?
+      - ಶಿಷ್ಯವೃತ್ತಿ ವಿವರಗಳನ್ನು ನನಗೆ ಹೇಳಿ
+      - ನಾನು ಶಿಷ್ಯವೃತ್ತಿಗಾಗಿ ಅರ್ಜಿ ಹೇಗೆ ಸಲ್ಲಿಸಬಹುದು?
+      - ಶಿಷ್ಯವೃತ್ತಿಯ ಅರ್ಹತಾ ಮापದಂಡಗಳು ಯಾವುವು?
+      - ನೀವು ಶಿಷ್ಯವೃತ್ತಿಯ ವಿವರಗಳನ್ನು ನೀಡಬಹುದೇ?
+
+  # Sports Facilities Intent
+  - intent: sports_facilities
+    examples: |
+      - Tell me about the sports facilities
+      - What sports facilities are available?
+      - Do you have sports facilities on campus?
+      - What types of sports facilities do you have?
+      - Can I participate in sports on campus?
+      - ಕ್ರೀಡಾ ಸೌಲಭ್ಯಗಳನ್ನು ನನಗೆ ಹೇಳಿ
+      - ನಿಮ್ಮಲ್ಲಿಯು ಯಾವ ಕ್ರೀಡಾ ಸೌಲಭ್ಯಗಳು ಲಭ್ಯವಿವೆ?
+      - ನಿಮ್ಮ ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಕ್ರೀಡಾ ಸೌಲಭ್ಯಗಳಿವೆ ಏನು?
+      - ನಾನು ಕ್ರೀಡೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಲು ಸಾಧ್ಯವೇ?
+
+  # Transport Facilities Intent
+  - intent: transport_facilities
+    examples: |
+      - Tell me about the transport facilities
+      - What are the transport facilities available?
+      - How can I avail the transport facilities?
+      - Do you provide transport for students?
+      - What areas are covered by your transport facilities?
+      - ನಾವು ಸಾರಿಗೆ ಸೌಲಭ್ಯಗಳನ್ನು ಹೇಗೆ ಪಡೆಯಬಹುದು?
+      - ನಿಮ್ಮ ಸಾರಿಗೆ ಸೌಲಭ್ಯಗಳ ಬಗ್ಗೆ ನನಗೆ ತಿಳಿಸಿ
+      - ನೀವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಾರಿಗೆ ನೀಡುತ್ತೀರಾ?
+      - ನಿಮ್ಮ ಸಾರಿಗೆ ಸೇವೆಗಳು ಯಾವ ಭಾಗಗಳನ್ನು ಒಳಗೊಂಡಿವೆ?
+
+  - intent: campus_facilities
+    examples: |
+      - Tell me about campus facilities.
+      - What are the campus facilities?
+      - Can you share the campus facilities?
+      - What kind of facilities do you have on campus?
+      - What are the amenities on campus?
+      - Do you provide any campus facilities?
+      - What campus facilities are available?
+
+  - intent: campus_facilities
+    examples: |
+      - ನನ್ನ ಕಾಲೇಜು ವಸತಿಗಳ ಬಗ್ಗೆ ತಿಳಿಸು.
+      - ನಿಮ್ಮ ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಯಾವ ಸೌಲಭ್ಯಗಳಿವೆ?
+      - ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಎಲ್ಲಿ ಸೌಲಭ್ಯಗಳನ್ನು ಪಡೆಯಬಹುದು?
+      - ಕ್ಯಾಂಪಸ್ ಸೌಲಭ್ಯಗಳ ಬಗ್ಗೆ ನನಗೆ ಮಾಹಿತಿ ಕೊಡು.
+      - ನಿಮ್ಮ ಕಾಲೇಜು ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಯಾವ ಸೌಲಭ್ಯಗಳನ್ನು ನೀಡಲಾಗುತ್ತದೆ?
+      - ನೀವು ಕ್ಯಾಂಪಸ್ ಸೌಲಭ್ಯಗಳನ್ನು ಒದಗಿಸುತ್ತೀರಾ?
+      - ಕ್ಯಾಂಪಸ್‌ನಲ್ಲಿ ಇರುವ ಸೌಲಭ್ಯಗಳ ಬಗ್ಗೆ ನನಗೆ ವಿವರಿಸು.

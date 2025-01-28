@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Enquiry Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://gat.ac.in/images/GAT-logo.png" alt="GAT Logo">
+    </div>
+    <div class="header-title">
+      <h1>Global Academy of Technology</h1>
+      <p>Your Pathway to a Brighter Future</p>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="https://gat.ac.in/">Home</a></li>
+      <li><a href="https://gat.ac.in/about-gat">About Us</a></li>
+      <li><a href="https://gat.ac.in/undergraduate-program">Academics</a></li>
+      <li><a href="https://gat.ac.in/ise-overview">Department</a></li>
+      <li><a href="https://gat.ac.in/ug-admissions">Admission</a></li>
+      <li><a href="https://gat.ac.in/why-gat">Campus Life</a></li>
+      <li><a href="https://gat.ac.in/about-coe">Examination</a></li>
+      <li><a href="https://gat.ac.in/placement-overview">Placements</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Global Academy of Technology</h2>
+    <p>Providing World-Class Education and Research Opportunities</p>
+    <a href="https://gat.ac.in/" class="cta-btn">Explore Now</a>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <h2>About Gat</h2>
+    <p>Introduction
+      Global Academy of Technology (GAT), established in the year 2001, is one of the most sought-after engineering and management colleges in Bengaluru, Karnataka. Located in a sprawling campus of 10-acre land, GAT is a campus ideal for students to hone their academics in an atmosphere of optimism. The institute is enabled with</p>
+    <p>Explore the vibrant campus life, modern facilities, and a wide range of courses that help shape your future.</p>
+  </main>
+
+  <!-- Chat Widget -->
+  <div id="chat-widget">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat Icon">
+  </div>
+
+  <!-- Chat Window -->
+  <div id="chat-container">
+    <div id="chat-box"></div>
+    <div id="input-area">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 ABC College. All Rights Reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+
+<!-- Include the Rasa Webchat library -->
+<script src="https://unpkg.com/rasa-webchat@1.0.1/lib/index.js"></script>
+
+<!-- Load your external JavaScript file SECOND -->
+<script src="script.js"></script>s
+
+<!-- Initialize Rasa Webchat -->
+<script>
+  window.WebChat.default.init({
+    selector: "#webchat", // The chatbot container
+    initPayload: "/get_started", // Initial message
+    customData: { language: "en" }, // Pass custom data if needed
+    socketUrl: "http://localhost:5005", // URL of the Rasa server
+    title: "College Enquiry Bot",
+    subtitle: "Ask me anything about our college!",
+  });
+</script>
+
+</body>
+</html>
